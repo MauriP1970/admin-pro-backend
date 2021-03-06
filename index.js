@@ -17,6 +17,10 @@ app.use(express.json());
 // Base de datos
 dbConnection();
 
+//Directorio public
+app.use( express.static('public') );
+
+
 // rutas
 app.use('/api/usuarios', require('./routes/usuarios'));
 app.use('/api/hospitales', require('./routes/hospitales'));
